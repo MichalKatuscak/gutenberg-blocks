@@ -24,10 +24,12 @@ function katuscak_gutenberg_block_editor_assets() {
 add_action('enqueue_block_editor_assets', 'katuscak_gutenberg_block_editor_assets');
 
 function katuscak_gutenberg_block_assets() {
-    wp_enqueue_style(
-        'katuscak-gutenberg/blockquote-with-image',
-        plugins_url('/gutenberg/blocks/blockquote-with-image/view.css',__FILE__)
-    );
+    if( !is_admin() ) {
+        wp_enqueue_style(
+            'katuscak-gutenberg/blockquote-with-image',
+            plugins_url('/gutenberg/blocks/blockquote-with-image/view.css', __FILE__)
+        );
+    }
 }
 
 add_action('enqueue_block_assets', 'katuscak_gutenberg_block_assets');
