@@ -1,0 +1,16 @@
+{
+  "name": "katuscak-gutenberg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "block.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@wordpress/scripts": "^3.1.0"
+  },
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "author": "",
+  "license": "ISC"
+}

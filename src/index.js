@@ -1,0 +1,1 @@
+import "../gutenberg/blocks/blockquote-with-image/editor"
