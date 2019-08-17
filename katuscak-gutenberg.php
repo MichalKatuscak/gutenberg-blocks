@@ -7,6 +7,11 @@ Version: 0.1
 Author URI: https://www.katuscak.cz/
 */
 
+
+include_once __DIR__ . "/inc/API.class.php";
+$api = new \KatuscakGutenberg\API();
+$api->init();
+
 function katuscak_gutenberg_block_editor_assets() {
     wp_enqueue_script(
         'katuscak-gutenberg/blockquote-with-image-editor',
