@@ -38,3 +38,25 @@ function katuscak_gutenberg_block_assets() {
 }
 
 add_action('enqueue_block_assets', 'katuscak_gutenberg_block_assets');
+
+
+function katuscak_gutenber_register_blocks()
+{
+    // Pouze pokud je Gutenberg dostupný
+    if (!function_exists('register_block_type')) {
+        return;
+    }
+
+    register_block_type('katuscak-gutenberg/authors', [
+        'render_callback' => 'katuscak_gutenberg_authors_render',
+    ]);
+}
+
+katuscak_gutenber_register_blocks();
+
+
+function katuscak_gutenberg_authors_render($attributes, $content)
+{
+    $users = json_decode($attributes["user"]);
+    var_dump($users);
+}
